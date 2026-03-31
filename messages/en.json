@@ -1,0 +1,36 @@
+{
+  "HomePage": {
+    "title": "<brand>PetroWell</brand><subtitle> Your Partner for Oil and Gas Development in Libya</subtitle>",
+    "description": "We provide integrated engineering and logistics solutions to increase production and ensure sustainability in the oil and gas sector.",
+    "cta": "Get our services offer",
+    "about": {
+      "title": "About <brand>PetroWell</brand>",
+      "subtitle": "Leadership with global standards",
+      "vision": "Our Vision",
+      "visionText": "To be the leading partner in developing energy fields in Libya through innovation and excellence.",
+      "mission": "Our Mission",
+      "missionText": "Providing high-quality engineering and logistics services that ensure operational efficiency and sustainability.",
+      "values": "Core Values",
+      "valuesText": "Excellence, Reliability, and Responsibility in every project we undertake."
+    },
+    "services": {
+      "title": "Integrated Engineering & Field Services",
+      "drilling": "Well Drilling & Maintenance",
+      "engineering": "Desert Projects (Mech/Elec)",
+      "logistics": "Catering & Logistics"
+    },
+    "leadership": {
+      "title": "Leadership Team",
+      "gm": "General Manager",
+      "founder": "Co-founder",
+      "chairman": "Chairman of Monitoring Committee"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact Us"
+  }
+}
