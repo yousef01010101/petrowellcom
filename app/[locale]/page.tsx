@@ -34,7 +34,6 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
             <a href="#home" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('home')}</a>
             <a href="#about" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('about')}</a>
             <a href="#services" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('services')}</a>
-            <a href="#team" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('team')}</a>
             <a href="#contact" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('contact')}</a>
             <div className="h-4 w-1 bg-brand-blue/20" />
             <a href={isRtl ? '/en' : '/ar'} className="bg-brand-blue px-4 py-2 text-white text-[10px] font-black uppercase tracking-widest hover:bg-brand-red transition-colors">
@@ -99,25 +98,6 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section id="team" className="py-32 px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <h2 className="text-xs font-black tracking-[0.6em] uppercase text-brand-blue mb-4">Our Management</h2>
-              <h3 className="text-6xl font-black uppercase text-stone-950">
-                {t.rich('leadership.title', {
-                  brand: (children) => renderBrand(children)
-                })}
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-16">
-              <TeamMember role={t('leadership.gm')} name="Eng. Member Name" />
-              <TeamMember role={t('leadership.founder')} name="Eng. Member Name" />
-              <TeamMember role={t('leadership.chairman')} name="Eng. Member Name" />
             </div>
           </div>
         </section>
@@ -205,21 +185,6 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
           </div>
         </div>
       </footer>
-    </div>
-  );
-}
-
-function TeamMember({name, role}: {name: string, role: string}) {
-  return (
-    <div className="space-y-6">
-      <div className="aspect-[4/5] bg-stone-100 border-8 border-stone-200 grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden relative group">
-        <div className="absolute inset-0 border-8 border-transparent group-hover:border-brand-red transition-all z-10" />
-        <div className="absolute inset-0 flex items-center justify-center text-4xl font-black text-stone-300 uppercase italic opacity-20 group-hover:opacity-10">PetroWell</div>
-      </div>
-      <div>
-        <div className="text-brand-red font-black text-xs uppercase tracking-widest mb-1">{role}</div>
-        <div className="text-2xl font-black uppercase text-stone-950">{name}</div>
-      </div>
     </div>
   );
 }
