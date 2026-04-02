@@ -112,10 +112,9 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
               </div>
               <div className="hidden lg:block w-32 h-32 border-8 border-brand-red flex-shrink-0" />
             </div>
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-2 gap-12">
               <ServiceCard title={t('services.drilling')} number="01" />
               <ServiceCard title={t('services.engineering')} number="02" />
-              <ServiceCard title={t('services.logistics')} number="03" />
             </div>
           </div>
         </section>
@@ -193,7 +192,7 @@ function ServiceCard({title, number}: {title: string, number: string}) {
   return (
     <div className="p-12 border-4 border-stone-950 hover:border-brand-red hover:bg-brand-red hover:text-white transition-all group relative overflow-hidden">
       <div className="text-7xl font-black opacity-10 absolute -top-4 -right-4 group-hover:opacity-20 transition-opacity uppercase">{number}</div>
-      <div className="text-sm font-black text-brand-blue group-hover:text-white mb-10 tracking-widest transition-colors uppercase">{number}/03</div>
+      <div className="text-sm font-black text-brand-blue group-hover:text-white mb-10 tracking-widest transition-colors uppercase">{number}/02</div>
       <h4 className="text-3xl font-black uppercase leading-tight tracking-tighter">{title}</h4>
       <div className="mt-8 w-12 h-2 bg-brand-blue group-hover:bg-white transition-all group-hover:w-full" />
     </div>
