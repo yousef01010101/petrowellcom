@@ -24,6 +24,12 @@
       "gm": "General Manager",
       "founder": "Co-founder",
       "chairman": "Chairman of Monitoring Committee"
+    },
+    "contact": {
+      "title": "Connect With Us",
+      "address": "Benghazi - Libya, Industrial Area",
+      "phone": "+218 (0) 61 123 4567",
+      "email": "operations@petrowell.com"
     }
   },
   "Navigation": {

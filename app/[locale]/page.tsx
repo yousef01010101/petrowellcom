@@ -34,6 +34,8 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
             <a href="#home" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('home')}</a>
             <a href="#about" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('about')}</a>
             <a href="#services" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('services')}</a>
+            <a href="#team" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('team')}</a>
+            <a href="#contact" className="text-sm font-black uppercase hover:text-brand-red border-b-2 border-transparent hover:border-brand-red transition-all">{nav('contact')}</a>
             <div className="h-4 w-1 bg-brand-blue/20" />
             <a href={isRtl ? '/en' : '/ar'} className="bg-brand-blue px-4 py-2 text-white text-[10px] font-black uppercase tracking-widest hover:bg-brand-red transition-colors">
               {isRtl ? 'English' : 'العربية'}
@@ -101,8 +103,27 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
           </div>
         </section>
 
+        {/* Team Section */}
+        <section id="team" className="py-32 px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-20">
+              <h2 className="text-xs font-black tracking-[0.6em] uppercase text-brand-blue mb-4">Our Management</h2>
+              <h3 className="text-6xl font-black uppercase text-stone-950">
+                {t.rich('leadership.title', {
+                  brand: (children) => renderBrand(children)
+                })}
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-16">
+              <TeamMember role={t('leadership.gm')} name="Eng. Member Name" />
+              <TeamMember role={t('leadership.founder')} name="Eng. Member Name" />
+              <TeamMember role={t('leadership.chairman')} name="Eng. Member Name" />
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
-        <section id="services" className="py-32 px-8 bg-white border-t-2 border-brand-blue/10">
+        <section id="services" className="py-32 px-8 bg-zinc-50 border-y-2 border-brand-blue/10">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-end justify-between mb-24 gap-10">
               <div className="flex-grow">
@@ -115,6 +136,48 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
               <ServiceCard title={t('services.drilling')} number="01" />
               <ServiceCard title={t('services.engineering')} number="02" />
               <ServiceCard title={t('services.logistics')} number="03" />
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-32 px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-20">
+              <div>
+                <h2 className="text-xs font-black tracking-[0.6em] uppercase text-brand-red mb-4">Ready to Partner</h2>
+                <h3 className="text-6xl font-black uppercase text-stone-950 leading-tight mb-10">{t('contact.title')}</h3>
+                <div className="space-y-8">
+                  <div className="flex gap-8 items-start">
+                    <div className="w-12 h-12 bg-brand-blue flex-shrink-0 flex items-center justify-center text-white font-black italic">A</div>
+                    <div>
+                      <div className="text-xs font-black uppercase text-brand-blue tracking-widest mb-1 italic">Location</div>
+                      <div className="text-xl font-bold uppercase">{t('contact.address')}</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-8 items-start">
+                    <div className="w-12 h-12 bg-brand-red flex-shrink-0 flex items-center justify-center text-white font-black italic">P</div>
+                    <div>
+                      <div className="text-xs font-black uppercase text-brand-red tracking-widest mb-1 italic">Operations</div>
+                      <div className="text-xl font-bold uppercase">{t('contact.phone')}</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-8 items-start">
+                    <div className="w-12 h-12 bg-brand-blue flex-shrink-0 flex items-center justify-center text-white font-black italic">E</div>
+                    <div>
+                      <div className="text-xs font-black uppercase text-brand-blue tracking-widest mb-1 italic">Direct Line</div>
+                      <div className="text-xl font-bold lowercase">{t('contact.email')}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-brand-red p-12 flex flex-col justify-center shadow-[16px_16px_0px_0px_rgba(0,0,128,1)]">
+                <h4 className="text-4xl font-black text-white uppercase leading-none mb-6">Expert Solutions for the Oil & Gas Industry.</h4>
+                <div className="h-1 w-24 bg-white mb-10" />
+                <button className="h-20 bg-white text-brand-red text-xl font-black uppercase tracking-widest hover:bg-brand-blue hover:text-white transition-all">
+                  Request Information
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -142,6 +205,21 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function TeamMember({name, role}: {name: string, role: string}) {
+  return (
+    <div className="space-y-6">
+      <div className="aspect-[4/5] bg-stone-100 border-8 border-stone-200 grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden relative group">
+        <div className="absolute inset-0 border-8 border-transparent group-hover:border-brand-red transition-all z-10" />
+        <div className="absolute inset-0 flex items-center justify-center text-4xl font-black text-stone-300 uppercase italic opacity-20 group-hover:opacity-10">PetroWell</div>
+      </div>
+      <div>
+        <div className="text-brand-red font-black text-xs uppercase tracking-widest mb-1">{role}</div>
+        <div className="text-2xl font-black uppercase text-stone-950">{name}</div>
+      </div>
     </div>
   );
 }

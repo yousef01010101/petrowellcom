@@ -24,6 +24,12 @@
       "gm": "المدير العام",
       "founder": "الشريك المؤسس",
       "chairman": "رئيس لجنة المراقبة"
+    },
+    "contact": {
+      "title": "تواصل معنا",
+      "address": "بنغازي - ليبيا، المنطقة الصناعية",
+      "phone": "+218 (0) 61 123 4567",
+      "email": "operations@petrowell.com"
     }
   },
   "Navigation": {
